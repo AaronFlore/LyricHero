@@ -37,7 +37,7 @@
                 class="w-full h-16 px-3 pr-8 text-lg text-white placeholder-white bg-transparent border-2 border-white rounded-full focus:outline-none focus:border-white mt-4"
                 placeholder="Type the words here">
         </div>
-        <div id="LyricsDiv" class="w-1/2 max-w-[600px] mx-auto relative h-[calc(100%-1px)] overflow-auto scrollbar-hide">
+        <div id="LyricsDiv" class="w-1/2 max-w-[600px] mx-auto relative h-[calc(100%-1px)] overflow-auto scrollbar-hide" style="overflow-y: hidden;">
             <div class="my-[90%]"></div>
             <div class="text-center text-[40px] font-semibold opacity-100" v-for="res in lyrics[currentTrack.id]" :key="res"
                 :class="snapToPosition(res)" v-show="res">
@@ -65,12 +65,11 @@ let currentLyricLine = ""
 let wordsSubmitted = 0
 const userInput = ref("");
 const progressBarPercent = ref(0);
-// Not sure if I need a seperate star count
 const correctCount = ref(0);
 const wrongCount = ref(0);
 const totalCorrectCount = ref(0);
 
-const { currentTrack, currentArtist, trackTime, isLyrics } = storeToRefs(useSong)
+const { currentTrack, currentArtist, trackTime, isLyrics, spaceBarClicks } = storeToRefs(useSong)
 
 onMounted(() => {
     if (trackTime.value < lyrics[currentTrack.value.id][0].time) {
@@ -112,6 +111,7 @@ watch(() => trackTime.value, (trackTime) => {
             progressBarPercent.value = 0
             correctCount.value = 0
             wrongCount.value = 0
+            spaceBarClicks.value = 0
         }
     })
 })
@@ -120,6 +120,7 @@ watch(() => trackTime.value, (trackTime) => {
 const handleSpacebar = () => {
     console.log("currentLyricLine:", currentLyricLine[wordsSubmitted], "wordsSubmitted", wordsSubmitted)
     if (wordsSubmitted < currentLyricLine.length) {
+        spaceBarClicks.value++
         if (userInput.value === currentLyricLine[wordsSubmitted]) {
             console.log("correct")
             wordsSubmitted++

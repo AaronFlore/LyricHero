@@ -10,7 +10,8 @@ export const useSongStore = defineStore('song', {
     trackTime: null,
     currentVolume: 80,
     isLyrics: false,
-    lyricsPosition: '0:00'
+    lyricsPosition: '0:00',
+    spaceBarClicks: 0
   }),
   actions: {
     loadSong(artist, track) {
