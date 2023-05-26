@@ -3,7 +3,7 @@ import { onBeforeMount } from 'vue';
 import { RouterView, RouterLink } from 'vue-router'
 
 import Magnify from 'vue-material-design-icons/Magnify.vue';
-import Bell from 'vue-material-design-icons/Bell.vue';
+import MusicNote from 'vue-material-design-icons/MusicNote.vue';
 import SideMenuItem from './components/SideMenuItem.vue';
 import MusicPlayer from './components/MusicPlayer.vue';
 import SongLyrics from './components/SongLyrics.vue';
@@ -27,9 +27,12 @@ onBeforeMount(() => {
     class="fixed w-[240px] bg-[#191922] h-[100vh] border-r border-r-[#32323D]"
   >
     <div class="w-full pl-6 pt-3 cursor-pointer">
-      <RouterLink to="/">
-        <img width="130" src="/images/deezer-logo.png">
-      </RouterLink>
+    <RouterLink to="/">
+      <div class="flex items-center">
+        <MusicNote class="text-xl text-blue-400 mr-2" />
+        <span class="text-xl font-bold text-blue-200">LyricSpeedTyper</span>
+      </div>
+    </RouterLink>
     </div>
 
     <div class="mt-[53px]"></div>
