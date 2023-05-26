@@ -6,9 +6,18 @@
             <Close :size="30" fillColor="#FFFFFF" />
         </button>
         <div class="w-1/2 max-w-[400px] mx-auto relative flex flex-col items-center">
-            <div v-if="correctCount + wrongCount === 0" class="px-5 py-3 text-lg font-large leading-none text-center text-blue-800 bg-blue-200 rounded-full animate-pulse dark:bg-blue-900 dark:text-blue-200">
-                Word Score: {{ totalCorrectCount }}</div>
-            <div class="flex items-center justify-end">
+<div class="mb-4 px-4 py-3 text-xl font-medium leading-none text-center bg-blue-500 text-white rounded-full">
+  <span class="mr-2">Word Score:</span>
+  <span class="inline-block bg-white text-blue-500 px-3 py-1 rounded-full">{{ totalCorrectCount }}</span>
+</div>
+
+            <div v-if="(correctCount + wrongCount === 0) && (wordsSubmitted === 0)"
+                class="px-5 py-3 text-lg font-large leading-none text-center text-blue-800 bg-blue-200 rounded-full animate-pulse dark:bg-blue-900 dark:text-blue-200">
+                Type along as the lyrics play!</div>
+            <div v-if="(correctCount + wrongCount === 0) && (wordsSubmitted !== 0)"
+                class="px-5 py-3 text-lg font-large leading-none text-center text-blue-800 bg-blue-200 rounded-full animate-pulse dark:bg-blue-900 dark:text-blue-200">
+                Wait for the next line...</div>
+            <div :style="{ paddingTop: '1rem' }" class="flex items-center justify-end">
                 <template v-for="n in correctCount">
                     <svg aria-hidden="true" class="w-10 h-10 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg">
@@ -28,7 +37,7 @@
                     </svg>
                 </template>
             </div>
-            <div class="mb-1 text-lg font-medium dark:text-white"> ... </div>
+            <div :style="{ paddingTop: '1rem' }" class="mb-1 text-lg font-medium dark:text-white"> </div>
             <div class="w-full h-6 bg-gray-200 rounded-full dark:bg-gray-700">
                 <div class="h-6 bg-blue-600 rounded-full dark:bg-blue-500" :style="{ width: `${progressBarPercent}%` }">
                 </div>
@@ -37,7 +46,8 @@
                 class="w-full h-16 px-3 pr-8 text-lg text-white placeholder-white bg-transparent border-2 border-white rounded-full focus:outline-none focus:border-white mt-4"
                 placeholder="Type the words here">
         </div>
-        <div id="LyricsDiv" class="w-1/2 max-w-[600px] mx-auto relative h-[calc(100%-1px)] overflow-auto scrollbar-hide" style="overflow-y: hidden;">
+        <div id="LyricsDiv" class="w-1/2 max-w-[600px] mx-auto relative h-[calc(100%-1px)] overflow-auto scrollbar-hide"
+            style="overflow-y: hidden;">
             <div class="my-[90%]"></div>
             <div class="text-center text-[40px] font-semibold opacity-100" v-for="res in lyrics[currentTrack.id]" :key="res"
                 :class="snapToPosition(res)" v-show="res">
