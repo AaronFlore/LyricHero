@@ -2,48 +2,50 @@
     <li 
         @mouseenter="isHover = true" 
         @mouseleave="isHover = false" 
-        class="flex items-center justify-between p-2 hover:bg-[#979797] hover:bg-opacity-5"
+        class="flex items-center justify-between p-3 hover:bg-[#979797] hover:bg-opacity-5"
     >
         <div class="flex items-center">
             <div class="relative">
                 <div 
                     v-if="isHover" 
-                    class="p-1 mt-[2px] ml-[3px] absolute rounded-full bg-white cursor-pointer"
+                    class="p-2 mt-[3px] ml-[4px] absolute rounded-full bg-white cursor-pointer"
                 >
                     <Play
                         v-if="!isPlaying"
                         @click="useSong.playOrPauseThisSong(artist, track)"
+                        :size="30"
                     />
                     <Play
                         v-else-if="isPlaying && currentTrack.name !== track.name"
                         @click="useSong.loadSong(artist, track)"
+                        :size="30"
                     />
                 </div>
                 <div 
                     v-if="track && currentTrack && currentTrack.name === track.name"
-                    class="p-1 mt-[2px] ml-[3px] absolute rounded-full bg-white cursor-pointer"
+                    class="p-2 mt-[3px] ml-[4px] absolute rounded-full bg-white cursor-pointer"
                 >
-                    <Pause v-if="!isHover && isPlaying" :size="25" @click="useSong.playOrPauseSong()"/>
-                    
+                    <Pause v-if="!isHover && isPlaying" :size="30" @click="useSong.playOrPauseSong()"/>
                 </div>
                 <div 
                     @mouseenter="isHoverGif = true"
                     @mouseleave="isHoverGif = false"
                     v-if="isPlaying && track && currentTrack && currentTrack.name === track.name" 
-                    class="p-1 mt-[2px] ml-[3px] absolute rounded-full bg-white cursor-pointer"
+                    class="p-2 mt-[3px] ml-[4px] absolute rounded-full bg-white cursor-pointer"
                 >
                     <img
                         v-if="!isHoverGif"
                         src="/images/audio-wave.gif"
+                        width="50"
                     >
-                    <Pause v-if="isHoverGif" :size="25" @click="useSong.playOrPauseSong()"/>
+                    <Pause v-if="isHoverGif" :size="30" @click="useSong.playOrPauseSong()"/>
                 </div>
-                <img width="37" class="border border-[#494949]" :src="artist.albumCover">
+                <img width="55" class="border border-[#494949]" :src="artist.albumCover">
             </div>
             <div 
                 v-if="track"
-                :class="track && currentTrack && currentTrack.name === track.name ? 'text-[#EF5464]' : 'text-[#d4d4d4]'"
-                class="text-sm pl-4 hover:underline cursor-pointer"
+                :class="track && currentTrack && currentTrack.name === track.name ? 'text-[#EF5464] text-lg' : 'text-[#d4d4d4] text-lg'"
+                class="pl-6 hover:underline cursor-pointer"
             >
                 {{ track.id }}. {{ track.name }}
             </div>
@@ -52,26 +54,27 @@
             <div 
                 v-if="track.lyrics" 
                 @click="openLyrics(track, artist)"
-                class="rotate-45 rounded-full p-1.5 mr-3 hover:bg-[#979797] hover:bg-opacity-20 cursor-pointer"
+                class="rotate-45 rounded-full p-2 mr-4 hover:bg-[#979797] hover:bg-opacity-20 cursor-pointer"
             >
-                <MicrophoneVariant fillColor="#CCCCCC" :size="21"/>
+                <MicrophoneVariant fillColor="#CCCCCC" :size="26"/>
             </div>
-            <div class="rounded-full p-1.5 mr-3 hover:bg-[#979797] hover:bg-opacity-20 cursor-pointer">
-                <HeartOutline fillColor="#CCCCCC" :size="21"/>
+            <div class="rounded-full p-2 mr-4 hover:bg-[#979797] hover:bg-opacity-20 cursor-pointer">
+                <HeartOutline fillColor="#CCCCCC" :size="26"/>
             </div>
-            <div class="rounded-full p-1.5 hover:bg-[#979797] hover:bg-opacity-20 cursor-pointer">
-                <DotsHorizontal fillColor="#CCCCCC" :size="21"/>
+            <div class="rounded-full p-2 hover:bg-[#979797] hover:bg-opacity-20 cursor-pointer">
+                <DotsHorizontal fillColor="#CCCCCC" :size="26"/>
             </div>
             <div
                 v-if="isTrackTime"
-                :class="track && currentTrack && currentTrack.name === track.name ? 'text-[#EF5464]' : 'text-[#d4d4d4]'"
-                class="text-[13px] pl-10 font-[200] text-[#d4d4d4]"
+                :class="track && currentTrack && currentTrack.name === track.name ? 'text-[#EF5464] text-sm' : 'text-[#d4d4d4] text-sm'"
+                class="pl-12 font-[200] text-[#d4d4d4]"
             >
                 {{ isTrackTime }}
             </div> 
         </div>
     </li>
 </template>
+
 
 <script setup>
   import { ref, toRefs, onMounted } from 'vue'

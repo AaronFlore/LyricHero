@@ -6,12 +6,12 @@
             <Close :size="30" fillColor="#FFFFFF" />
         </button>
         <div class="w-1/2 max-w-[400px] mx-auto relative flex flex-col items-center">
-<div class="mb-4 px-4 py-3 text-xl font-medium leading-none text-center bg-blue-500 text-white rounded-full">
-  <span class="mr-2">Word Score:</span>
-  <span class="inline-block bg-white text-blue-500 px-3 py-1 rounded-full">{{ totalCorrectCount }}</span>
-</div>
+            <div class="mb-10 px-6 py-4 text-2xl font-medium leading-none text-center bg-blue-500 text-white rounded-full">
+                <span class="mr-3">Word Score:</span>
+                <span class="inline-block bg-white text-blue-500 px-4 py-2 rounded-full">{{ totalCorrectCount }}</span>
+            </div>
 
-            <div v-if="(correctCount + wrongCount === 0) && (wordsSubmitted === 0)"
+            <div v-if="(spaceBarClicks === 0) && (wordsSubmitted === 0)"
                 class="px-5 py-3 text-lg font-large leading-none text-center text-blue-800 bg-blue-200 rounded-full animate-pulse dark:bg-blue-900 dark:text-blue-200">
                 Type along as the lyrics play!</div>
             <div v-if="(correctCount + wrongCount === 0) && (wordsSubmitted !== 0)"
@@ -123,6 +123,9 @@ watch(() => trackTime.value, (trackTime) => {
             wrongCount.value = 0
             spaceBarClicks.value = 0
         }
+        setTimeout(() => {
+            // add countdown here
+        }, 1000)
     })
 })
 
@@ -151,5 +154,6 @@ const handleSpacebar = () => {
     progressBarPercent.value = (wordsSubmitted / currentLyricLine.length) * 100
     console.log("pBar", progressBarPercent.value)
 };
+
 
 </script>

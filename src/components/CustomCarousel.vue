@@ -66,10 +66,10 @@
     if (val && currentSlide.value <= 7) {
 
       let res = currentSlide.value + 4
-      if (res <= 12) {
+      if (res <= 8) {
         currentSlide.value = currentSlide.value + 4
-      } else if (res > 12) {
-        currentSlide.value = 12
+      } else if (res > 8) {
+        currentSlide.value = 8
       }
 
     } else if (!val) {
