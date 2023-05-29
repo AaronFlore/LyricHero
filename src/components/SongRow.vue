@@ -12,12 +12,12 @@
                 >
                     <Play
                         v-if="!isPlaying"
-                        @click="useSong.playOrPauseThisSong(artist, track)"
+                        @click="useSong.playOrPauseThisSong(artist, track), openLyrics(track, artist)"
                         :size="30"
                     />
                     <Play
                         v-else-if="isPlaying && currentTrack.name !== track.name"
-                        @click="useSong.loadSong(artist, track)"
+                        @click="useSong.loadSong(artist, track), openLyrics(track, artist)"
                         :size="30"
                     />
                 </div>

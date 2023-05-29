@@ -7,7 +7,7 @@ import ShuffleVariant from 'vue-material-design-icons/ShuffleVariant.vue';
 import HeartOutline from 'vue-material-design-icons/HeartOutline.vue';
 import MicrophoneVariant from 'vue-material-design-icons/MicrophoneVariant.vue';
 import Plus from 'vue-material-design-icons/Plus.vue';
-import Tune from 'vue-material-design-icons/Tune.vue';
+import starOutline from 'vue-material-design-icons/starOutline.vue';
 import PictureInPictureBottomRight from 'vue-material-design-icons/PictureInPictureBottomRight.vue';
 import Play from 'vue-material-design-icons/Play.vue';
 import Pause from 'vue-material-design-icons/Pause.vue';
@@ -158,17 +158,6 @@ watch(() => currentTrack.value.id, (val) => {
                     <div class="text-white relative -top-1 left-[6px]">.</div>
                     <div class="text-white text-[14px] font-[300] ml-3">{{ currentArtist.name }}</div>
                 </div>
-                <div class="flex items-center">
-                    <div class="p-1.5 ml-2 hover:bg-[#5a5a5a] hover:bg-opacity-50 rounded-full cursor-pointer">
-                        <Plus fillColor="#FFFFFF" :size="20" />
-                    </div>
-                    <div class="p-1.5 ml-2 hover:bg-[#5a5a5a] hover:bg-opacity-50 rounded-full cursor-pointer">
-                        <HeartOutline fillColor="#FFFFFF" :size="20" />
-                    </div>
-                    <div class="p-1.5 ml-2 hover:bg-[#5a5a5a] hover:bg-opacity-50 rounded-full cursor-pointer">
-                        <Tune fillColor="#FFFFFF" :size="20" />
-                    </div>
-                </div>
             </div>
 
             <div class="flex items-center">
@@ -227,11 +216,8 @@ watch(() => currentTrack.value.id, (val) => {
 
         <div class="flex items-center w-1/4 justify-end pr-6 ">
             <div class="flex items-center">
-                <div class="p-2 ml-2 hover:bg-[#5a5a5a] hover:bg-opacity-50 rounded-full cursor-pointer">
-                    <PictureInPictureBottomRight class="block" fillColor="#FFFFFF" :size="17" />
-                </div>
-                <div class="p-2 ml-2 hover:bg-[#5a5a5a] hover:bg-opacity-50 rounded-full cursor-pointer">
-                    <ShuffleVariant class="block" fillColor="#FFFFFF" :size="17" />
+                <div class="p-1.5 ml-2 hover:bg-[#5a5a5a] hover:bg-opacity-50 rounded-full cursor-pointer">
+                    <starOutline fillColor="#FFFFFF" :size="20" />
                 </div>
                 <div 
                     @mouseenter="isVolumeHover = true" 
@@ -249,13 +235,10 @@ watch(() => currentTrack.value.id, (val) => {
                         <MusicPlayerVolume />
                     </div>
                 </div>
-                <div class="p-2 ml-2 hover:bg-[#5a5a5a] hover:bg-opacity-50 rounded-full cursor-pointer">
-                    <Tune class="block" fillColor="#FFFFFF" :size="17" />
-                </div>
             </div>
             <div class="flex items-center ml-6 border-l border-l-[#363636]">
                 <img class="rounded-sm ml-6" width="28" :src="currentArtist.albumCover">
-                <div class="text-xs ml-1.5 text-white font-light">Queue</div>
+                <div class="text-xs ml-1.5 text-white font-light">LyricSpeedTyper</div>
             </div>
         </div>
     </div>

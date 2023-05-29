@@ -29,8 +29,8 @@ onBeforeMount(() => {
     <div class="w-full pl-6 pt-3 cursor-pointer">
     <RouterLink to="/">
       <div class="flex items-center">
-        <MusicNote class="text-xl text-blue-400 mr-2" />
-        <span class="text-xl font-bold text-blue-200">LyricSpeedTyper</span>
+        <MusicNote class="text-xl text-slate-400 mr-2" />
+        <span class="text-xl font-bold text-slate-100">LyricSpeedTyper</span>
       </div>
     </RouterLink>
     </div>
@@ -38,7 +38,7 @@ onBeforeMount(() => {
     <div class="mt-[53px]"></div>
     
     <SideMenuItem iconString="music" :iconSize="20" pageUrl="/artist" name="Play" />
-    <SideMenuItem iconString="music" :iconSize="20" pageUrl="/" name="Play2" />
+    <SideMenuItem iconString="music" :iconSize="20" pageUrl="/" name="How to Play" />
     <SideMenuItem iconString="explore" :iconSize="20" pageUrl="/podcasts" name="Leaderboard" />
     <SideMenuItem iconString="favourite" :iconSize="20" pageUrl="/favourite" name="About" />
 

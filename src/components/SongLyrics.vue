@@ -1,7 +1,7 @@
 <template>
     <div
         class="fixed w-full h-[calc(100%-80px)] flex items-center mx-auto bg-gradient-to-r from-blue-400 to-transparent bg-purple-600 min-w-[1000px]">
-        <button @click="isLyrics = false" type="button"
+        <button @click="isLyrics = false, useSong.playOrPauseSong()" type="button"
             class="absolute top-0 m-8 p-2 bg-black bg-opacity-20 hover:bg-opacity-40 rounded-full">
             <Close :size="30" fillColor="#FFFFFF" />
         </button>
@@ -118,13 +118,14 @@ watch(() => trackTime.value, (trackTime) => {
             currentLyricLine = lyrics[currentTrack.value.id][lyricLine].words.split(' ')
             lyricLine++
             wordsSubmitted = 0
+            userInput.value = ''
             progressBarPercent.value = 0
             correctCount.value = 0
             wrongCount.value = 0
             spaceBarClicks.value = 0
         }
         setTimeout(() => {
-            // add countdown here
+            // calculate timer here)
         }, 1000)
     })
 })
