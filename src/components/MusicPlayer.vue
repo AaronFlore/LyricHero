@@ -153,7 +153,7 @@ watch(() => currentTrack.value.id, (val) => {
         <div class=" mb-2.5 w-full max-w-[50%] mx-10">
             <div class="flex items-center justify-between pl-1 relative top-1 mx-7">
                 <div class="flex items-center">
-                    <div class="bg-[#2E2E39] py-0.5 px-1 text-[10px] text-[#72727D]">ALBUM</div>
+                    <div class="bg-[#2E2E39] py-0.5 px-1 text-[10px] text-[#72727D]">SONG SELECTED:</div>
                     <div class="text-white text-[14px] font-[300] ml-3">{{ currentTrack.name }}</div>
                     <div class="text-white relative -top-1 left-[6px]">.</div>
                     <div class="text-white text-[14px] font-[300] ml-3">{{ currentArtist.name }}</div>

@@ -39,7 +39,7 @@
             </div>
             <div :style="{ paddingTop: '1rem' }" class="mb-1 text-lg font-medium dark:text-white"> </div>
             <div class="w-full h-6 bg-gray-200 rounded-full dark:bg-gray-700">
-                <div class="h-6 bg-blue-600 rounded-full dark:bg-blue-500" :style="{ width: `${progressBarPercent}%` }">
+                <div class="h-6 bg-blue-600 rounded-full dark:bg-blue-500" :style="{ width: `${percentage}%` }">
                 </div>
             </div>
             <input type="text" v-model="userInput" @keydown.space.prevent="handleSpacebar"
@@ -47,7 +47,7 @@
                 placeholder="Type the words here">
         </div>
         <div id="LyricsDiv" class="w-1/2 max-w-[600px] mx-auto relative h-[calc(100%-1px)] overflow-auto scrollbar-hide"
-            style="overflow-y: hidden;">
+            style="overflow-y: hidden">
             <div class="my-[90%]"></div>
             <div class="text-center text-[40px] font-semibold opacity-100" v-for="res in lyrics[currentTrack.id]" :key="res"
                 :class="snapToPosition(res)" v-show="res">
@@ -73,11 +73,13 @@ const useSong = useSongStore()
 let lyricLine = 0
 let currentLyricLine = ""
 let wordsSubmitted = 0
+let nextLyricTime = 0
 const userInput = ref("");
 const progressBarPercent = ref(0);
 const correctCount = ref(0);
 const wrongCount = ref(0);
 const totalCorrectCount = ref(0);
+const percentage = ref(0);
 
 const { currentTrack, currentArtist, trackTime, isLyrics, spaceBarClicks } = storeToRefs(useSong)
 
@@ -85,6 +87,7 @@ onMounted(() => {
     if (trackTime.value < lyrics[currentTrack.value.id][0].time) {
         document.getElementById('LyricsDiv').scrollTop = 0;
     }
+    nextLyricTime = convertToSeconds(lyrics[currentTrack.value.id][0].time)
 })
 
 const snapToPosition = (res) => {
@@ -123,12 +126,39 @@ watch(() => trackTime.value, (trackTime) => {
             correctCount.value = 0
             wrongCount.value = 0
             spaceBarClicks.value = 0
+            nextLyricTime = convertToSeconds(lyrics[currentTrack.value.id][lyricLine].time) - convertToSeconds(lyrics[currentTrack.value.id][lyricLine - 1].time)
+            startTimer(nextLyricTime)
         }
-        setTimeout(() => {
-            // calculate timer here)
-        }, 1000)
     })
 })
+
+function convertToSeconds(timeInput) {
+  const [minutes, seconds] = timeInput.split(":");
+  const totalSeconds = parseInt(minutes) * 60 + parseInt(seconds);
+  return totalSeconds;
+}
+
+function startTimer(seconds) {
+  const startTime = performance.now();
+  const endTime = startTime + seconds * 1000;
+
+  const timerInterval = setInterval(() => {
+    const currentTime = performance.now();
+    const elapsedTime = currentTime - startTime;
+    const remainingTime = Math.max(0, endTime - currentTime);
+
+    const decisecondsElapsed = Math.floor(elapsedTime / 100);
+    const decisecondsRemaining = Math.ceil(remainingTime / 100);
+
+    percentage.value = ((decisecondsElapsed / (seconds * 10)) * 100).toFixed(2);
+    if (remainingTime === 0) {
+      clearInterval(timerInterval);
+      console.log("Timer completed!");
+    } else {
+      console.log(`Time remaining: ${percentage.value}% completed`);
+    }
+  }, 500);
+}
 
 
 const handleSpacebar = () => {
@@ -158,3 +188,9 @@ const handleSpacebar = () => {
 
 
 </script>
+
+<style scoped>
+.bg-blue-600 {
+  transition: width 0.1s ease-in-out;
+}
+</style>
