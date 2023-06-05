@@ -1,7 +1,7 @@
 {
-    "name": "Diaries Of A Hero",
+    "name": " ",
     "albumCover": "/images/albumCovers/fireType.jpeg",
-    "releaseYear": "2014",
+    "releaseYear": "2023",
     "tracks": [
         {
             "id": 1,
@@ -17,9 +17,9 @@
         },
         {
             "id": 3,
-            "name": "Manimal",
-            "path": "/songs/Manimal.mp3",
-            "lyrics": false
+            "name": "Escape (The Pina Coloda Song) by Rupert Holmes",
+            "path": "/songs/Pina_Colada.mp3",
+            "lyrics": true
         }
     ]
 }

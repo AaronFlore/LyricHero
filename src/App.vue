@@ -29,8 +29,8 @@ onBeforeMount(() => {
     <div class="w-full pl-6 pt-3 cursor-pointer">
     <RouterLink to="/">
       <div class="flex items-center">
-        <MusicNote class="text-xl text-slate-400 mr-2" />
-        <span class="text-xl font-bold text-slate-100">LyricSpeedTyper</span>
+        <MusicNote class="text-l text-slate-400 mr-1" />
+        <span class="text-xl font-bold text-slate-100">Lyric Speed Typer</span>
       </div>
     </RouterLink>
     </div>
