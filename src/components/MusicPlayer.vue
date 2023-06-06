@@ -126,27 +126,23 @@ watch(() => currentTrack.value.id, (val) => {
                 <button 
                     type="button"
                     :disabled="currentTrack.id === 1"
-                    :class="{'rounded-full hover:bg-[#363636]': currentTrack.id !== 1}"
+                    :class="{'rounded-full': currentTrack.id !== 1}"
                     class="mx-2 p-2"
                     @click="useSong.prevSong(currentTrack)"
                 >
                     <SkipBackward :fillColor="currentTrack.id === 1 ? '#747474' : '#FFFFFF'" :size="25"/>
                 </button>
-                <button 
-                    type="button"
-                    class="p-2 rounded-full hover:bg-[#363636]" 
-                    @click="useSong.playOrPauseThisSong(currentArtist, currentTrack)"
+                <div 
+                    class="p-2 rounded-full" 
                 >
                     <Play v-if="!isPlaying" fillColor="#FFFFFF" :size="45" />
                     <Pause v-else fillColor="#FFFFFF" :size="45" />
-                </button>
-                <button 
-                    type="button"
-                    class="mx-2 p-2 rounded-full hover:bg-[#363636]" 
-                    @click="useSong.nextSong(currentTrack)"
+                </div>
+                <div 
+                    class="mx-2 p-2 rounded-full" 
                 >
                     <SkipForward fillColor="#FFFFFF" :size="25" />
-                </button>
+                </div>
             </div>
         </div>
 
@@ -170,11 +166,9 @@ watch(() => currentTrack.value.id, (val) => {
                 <div
                     ref="seekerContainer"
                     class="w-full relative mt-2 mb-3"
-                    @mouseenter="isHover = true"
-                    @mouseleave="isHover = false"
                 >
-                    <input
-                        v-model="range"
+                    <div
+                        
                         ref="seeker"
                         type="range"
                         class="
@@ -194,6 +188,7 @@ watch(() => currentTrack.value.id, (val) => {
                             { 'rangeDot': isHover }
                         "
                     >
+                    </div>
                     <div
                         class="pointer-events-none rounded-full absolute z-10 inset-y-0 left-0 w-0"
                         :style="`width: ${range}%; background-color: ${randColor.color}`"

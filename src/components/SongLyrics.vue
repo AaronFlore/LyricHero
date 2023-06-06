@@ -153,26 +153,20 @@ function startTimer(seconds) {
     percentage.value = ((decisecondsElapsed / (seconds * 10)) * 100).toFixed(2);
     if (remainingTime === 0) {
       clearInterval(timerInterval);
-      console.log("Timer completed!");
-    } else {
-      console.log(`Time remaining: ${percentage.value}% completed`);
     }
   }, 500);
 }
 
 
 const handleSpacebar = () => {
-    console.log("currentLyricLine:", currentLyricLine[wordsSubmitted], "wordsSubmitted", wordsSubmitted)
     if (wordsSubmitted < currentLyricLine.length) {
         spaceBarClicks.value++
         if (userInput.value === currentLyricLine[wordsSubmitted]) {
-            console.log("correct")
             wordsSubmitted++
             correctCount.value++
             totalCorrectCount.value++
         }
         else {
-            console.log("incorrect")
             wordsSubmitted++
             wrongCount.value++
         }
@@ -183,7 +177,6 @@ const handleSpacebar = () => {
     }
     userInput.value = '';
     progressBarPercent.value = (wordsSubmitted / currentLyricLine.length) * 100
-    console.log("pBar", progressBarPercent.value)
 };
 
 
