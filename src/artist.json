@@ -1,24 +1,34 @@
 {
     "name": " ",
-    "albumCover": "/images/albumCovers/fireType.jpeg",
+    "albumCover": "/images/albumCovers/fireType2.jpeg",
     "releaseYear": "2023",
     "tracks": [
         {
             "id": 1,
             "name": "Solitude",
             "path": "/songs/Solitude.mp3",
+            "albumCover": "/images/albumCovers/DiariesOfAHero.png",
             "lyrics": true
         },
         {
             "id": 2,
             "name": "Throne",
             "path": "/songs/Throne.mp3",
+            "albumCover": "/images/albumCovers/DiariesOfAHero.png",
             "lyrics": true
         },
         {
             "id": 3,
-            "name": "Escape (The Pina Coloda Song) by Rupert Holmes",
+            "name": "Escape (The Pina Coloda Song) - Rupert Holmes",
             "path": "/songs/Pina_Colada.mp3",
+            "albumCover": "/images/albumCovers/Pina_Colada.jpeg",
+            "lyrics": true
+        },
+        {
+            "id": 4,
+            "name": "Dreams - Fleetwood Mac",
+            "path": "/songs/Dreams.mp3",
+            "albumCover": "/images/albumCovers/rumours.jpeg",
             "lyrics": true
         }
     ]

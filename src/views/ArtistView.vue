@@ -29,14 +29,14 @@ const playFunc = () => {
 <template>
     <div id="HeaderSection" class="max-w-[1500px] mx-auto">
         <div class="flex items-center w-full relative h-full px-8 mt-6 min-w-[650px]">
-            <img width="175" class="rounded-full" :src="artist.albumCover">
+            <img width="175" class="h-full rounded" :src="artist.albumCover">
 
             <div class="ml-8">
                 <div class="text-white text-3xl w-full hover:underline cursor-pointer font-semibold">
                     Track Selection
                 </div>
 
-                <div class="mb-2 text-[#bfbfbf] text-[12px] py-1.5 font-light">Type along to the lyrics!</div>
+                <div class="mb-2 text-[#bfbfbf] text-[12px] py-1.5 font-light">Type along to the synchornized lyrics of the below songs!</div>
 
                 <div class="flex gap-4 items-center justify-start bottom-0 mb-1.5">
                     <button class="p-2.5 px-6 rounded-full bg-[#EF5465]" @click="playFunc()">

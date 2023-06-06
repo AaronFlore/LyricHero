@@ -40,28 +40,34 @@
                     >
                     <Pause v-if="isHoverGif" :size="30" @click="useSong.playOrPauseSong()"/>
                 </div>
-                <img width="55" class="border border-[#494949]" :src="artist.albumCover">
+                <img width="55" class="border border-[#494949]" :src="track.albumCover">
             </div>
             <div 
                 v-if="track"
                 :class="track && currentTrack && currentTrack.name === track.name ? 'text-[#EF5464] text-lg' : 'text-[#d4d4d4] text-lg'"
-                class="pl-6 hover:underline cursor-pointer"
+                class="pl-6 hover:underline cursor-pointer" @click="openLyrics(track, artist)"
             >
                 {{ track.id }}. {{ track.name }}
+                
             </div>
         </div>
         <div class="flex items-center">
-            <div 
-                v-if="track.lyrics" 
-                @click="openLyrics(track, artist)"
-                class="rotate-45 rounded-full p-2 mr-4 hover:bg-[#979797] hover:bg-opacity-20 cursor-pointer"
-            >
-                <MicrophoneVariant fillColor="#CCCCCC" :size="26"/>
+            <div class="rounded-full p-1 mr-1">
+                <starOutline fillColor="#CCCCCC" :size="26"/>
             </div>
-            <div class="rounded-full p-2 mr-4 hover:bg-[#979797] hover:bg-opacity-20 cursor-pointer">
-                <HeartOutline fillColor="#CCCCCC" :size="26"/>
+                        <div class="rounded-full p-1 mr-1">
+                <starOutline fillColor="#CCCCCC" :size="26"/>
             </div>
-            <div class="rounded-full p-2 hover:bg-[#979797] hover:bg-opacity-20 cursor-pointer">
+                        <div class="rounded-full p-1 mr-1">
+                <starOutline fillColor="#CCCCCC" :size="26"/>
+            </div>
+                        <div class="rounded-full p-1 mr-1">
+                <starOutline fillColor="#CCCCCC" :size="26"/>
+            </div>
+            <div class="rounded-full p-1 mr-6">
+                <starOutline fillColor="#CCCCCC" :size="26"/>
+            </div>
+                <div class="rounded-full p-1 mr-1">
                 <DotsHorizontal fillColor="#CCCCCC" :size="26"/>
             </div>
             <div
@@ -85,6 +91,7 @@
   import MicrophoneVariant from 'vue-material-design-icons/MicrophoneVariant.vue';
   import Play from 'vue-material-design-icons/Play.vue';
   import Pause from 'vue-material-design-icons/Pause.vue';
+  import starOutline from 'vue-material-design-icons/starOutline.vue';
 
   import { useSongStore } from '../stores/song'
   import { storeToRefs } from 'pinia';

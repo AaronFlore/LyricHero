@@ -37,10 +37,10 @@ onBeforeMount(() => {
 
     <div class="mt-[53px]"></div>
     
-    <SideMenuItem iconString="music" :iconSize="20" pageUrl="/artist" name="Play" />
-    <SideMenuItem iconString="music" :iconSize="20" pageUrl="/" name="How to Play" />
-    <SideMenuItem iconString="explore" :iconSize="20" pageUrl="/podcasts" name="Leaderboard" />
-    <SideMenuItem iconString="favourite" :iconSize="20" pageUrl="/favourite" name="About" />
+    <SideMenuItem iconString="music" :iconSize="20" pageUrl="/" name="Play" />
+    <SideMenuItem iconString="music" :iconSize="20" pageUrl="/howtoplay" name="How to Play" />
+    <SideMenuItem iconString="explore" :iconSize="20" pageUrl="/leaderboard" name="Leaderboard" />
+    <SideMenuItem iconString="favourite" :iconSize="20" pageUrl="/about" name="About" />
 
   </div>
 
