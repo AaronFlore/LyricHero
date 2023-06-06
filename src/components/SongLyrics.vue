@@ -13,7 +13,7 @@
 
             <div v-if="(spaceBarClicks === 0) && (wordsSubmitted === 0)"
                 class="px-5 py-3 text-lg font-large leading-none text-center text-blue-800 bg-blue-200 rounded-full animate-pulse dark:bg-blue-900 dark:text-blue-200">
-                Type along as the lyrics play!</div>
+                Type the highlighted word!</div>
             <div v-if="(correctCount + wrongCount === 0) && (wordsSubmitted !== 0)"
                 class="px-5 py-3 text-lg font-large leading-none text-center text-blue-800 bg-blue-200 rounded-full animate-pulse dark:bg-blue-900 dark:text-blue-200">
                 Wait for the next line...</div>

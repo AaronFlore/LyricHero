@@ -18,6 +18,7 @@ const { isPlaying, currentTrack, currentArtist } = storeToRefs(useSong)
 const playFunc = () => {
     if (currentTrack.value) {
         useSong.playOrPauseThisSong(currentArtist.value, currentTrack.value)
+        console.log('currentTrack.value', currentTrack.value, "currentArtist.value", currentArtist.value)
         return
     }
     useSong.playFromFirst()
@@ -31,30 +32,16 @@ const playFunc = () => {
         <div class="flex items-center w-full relative h-full px-8 mt-6 min-w-[650px]">
             <img width="175" class="h-full rounded" :src="artist.albumCover">
 
-            <div class="ml-8">
+            <div class="ml-8 mt-8">
                 <div class="text-white text-3xl w-full hover:underline cursor-pointer font-semibold">
-                    Track Selection
+                    Track Selection:
                 </div>
 
-                <div class="mb-2 text-[#bfbfbf] text-[12px] py-1.5 font-light">Type along to the synchornized lyrics of the below songs!</div>
-
+                <div class="mb-2 text-[#bfbfbf] text-[16px] py-1.5 font-light">Type along in real-time to the synchronized lyrics of the below songs. 
+                    <br> Practice typing fast and accurately!
+                </div>
                 <div class="flex gap-4 items-center justify-start bottom-0 mb-1.5">
-                    <button class="p-2.5 px-6 rounded-full bg-[#EF5465]" @click="playFunc()">
-                        <div v-if="!isPlaying" class="flex items-center">
-                            <Play fillColor="#FFFFFF" :size="20" />
-                            <div class="text-white font-bold text-xs pr-1">PLAY</div>
-                        </div>
-                        <div v-else class="flex items-center">
-                            <Pause fillColor="#FFFFFF" :size="20" />
-                            <div class="text-white font-bold text-xs pr-1">PAUSE</div>
-                        </div>
-                    </button>
-                    <button type="button" class="rounded-full p-2 border border-[#52525D] hover:bg-[#2b2b30]">
-                        <HeartOutline fillColor="#EAEAEA" :size="20" />
-                    </button>
-                    <button type="button" class="rounded-full p-2 border border-[#52525D] hover:bg-[#2b2b30]">
-                        <DotsHorizontal fillColor="#EAEAEA" :size="20" />
-                    </button>
+                    ...
                 </div>
             </div>
         </div>
