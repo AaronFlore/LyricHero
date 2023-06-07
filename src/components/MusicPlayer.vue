@@ -2,12 +2,7 @@
 import { ref, watch, onMounted } from 'vue'
 
 import MusicPlayerVolume from '../components/MusicPlayerVolume.vue'
-
-import ShuffleVariant from 'vue-material-design-icons/ShuffleVariant.vue';
 import HeartOutline from 'vue-material-design-icons/HeartOutline.vue';
-import MicrophoneVariant from 'vue-material-design-icons/MicrophoneVariant.vue';
-import Plus from 'vue-material-design-icons/Plus.vue';
-import PictureInPictureBottomRight from 'vue-material-design-icons/PictureInPictureBottomRight.vue';
 import Play from 'vue-material-design-icons/Play.vue';
 import Pause from 'vue-material-design-icons/Pause.vue';
 import SkipBackward from 'vue-material-design-icons/SkipBackward.vue';
@@ -129,18 +124,18 @@ watch(() => currentTrack.value.id, (val) => {
                     class="mx-2 p-2"
                     @click="useSong.prevSong(currentTrack)"
                 >
-                    <SkipBackward :fillColor="currentTrack.id === 1 ? '#747474' : '#FFFFFF'" :size="25"/>
+                    <SkipBackward :fillColor="currentTrack.id === 1 ? '#333333' : '#333333'" :size="25"/>
                 </button>
                 <div 
                     class="p-2 rounded-full" 
                 >
-                    <Play v-if="!isPlaying" fillColor="#FFFFFF" :size="45" />
-                    <Pause v-else fillColor="#FFFFFF" :size="45" />
+                    <Play v-if="!isPlaying" fillColor="#333333" :size="45" />
+                    <Pause v-else fillColor="#333333" :size="45" />
                 </div>
                 <div 
                     class="mx-2 p-2 rounded-full" 
                 >
-                    <SkipForward fillColor="#FFFFFF" :size="25" />
+                    <SkipForward fillColor="#333333" :size="25" />
                 </div>
             </div>
         </div>
@@ -210,8 +205,8 @@ watch(() => currentTrack.value.id, (val) => {
 
         <div class="flex items-center w-1/4 justify-end pr-6 ">
             <div class="flex items-center">
-                <div class="p-1.5 ml-2 hover:bg-[#5a5a5a] hover:bg-opacity-50 rounded-full cursor-pointer">
-                    <HeartOutline fillColor="#FFFFFF" :size="20" />
+                <div class="p-1.5 ml-2">
+                    <HeartOutline fillColor="#333333" :size="20" />
                 </div>
                 <div 
                     @mouseenter="isVolumeHover = true" 

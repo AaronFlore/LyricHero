@@ -1,7 +1,7 @@
 <template>
     <div
         class="fixed w-full h-[calc(100%-80px)] flex items-center mx-auto bg-gradient-to-r from-blue-400 to-transparent bg-purple-600 min-w-[1000px]">
-        <button @click="isLyrics = false, useSong.playOrPauseSong()" type="button"
+        <button @click="isLyrics = false, useSong.playOrPauseSong(), useSong.resetState() " type="button"
             class="absolute top-0 m-8 p-2 bg-black bg-opacity-20 hover:bg-opacity-40 rounded-full">
             <Close :size="30" fillColor="#FFFFFF" />
         </button>
@@ -133,28 +133,28 @@ watch(() => trackTime.value, (trackTime) => {
 })
 
 function convertToSeconds(timeInput) {
-  const [minutes, seconds] = timeInput.split(":");
-  const totalSeconds = parseInt(minutes) * 60 + parseInt(seconds);
-  return totalSeconds;
+    const [minutes, seconds] = timeInput.split(":");
+    const totalSeconds = parseInt(minutes) * 60 + parseInt(seconds);
+    return totalSeconds;
 }
 
 function startTimer(seconds) {
-  const startTime = performance.now();
-  const endTime = startTime + seconds * 1000;
+    const startTime = performance.now();
+    const endTime = startTime + seconds * 1000;
 
-  const timerInterval = setInterval(() => {
-    const currentTime = performance.now();
-    const elapsedTime = currentTime - startTime;
-    const remainingTime = Math.max(0, endTime - currentTime);
+    const timerInterval = setInterval(() => {
+        const currentTime = performance.now();
+        const elapsedTime = currentTime - startTime;
+        const remainingTime = Math.max(0, endTime - currentTime);
 
-    const decisecondsElapsed = Math.floor(elapsedTime / 100);
-    const decisecondsRemaining = Math.ceil(remainingTime / 100);
+        const decisecondsElapsed = Math.floor(elapsedTime / 100);
+        const decisecondsRemaining = Math.ceil(remainingTime / 100);
 
-    percentage.value = ((decisecondsElapsed / (seconds * 10)) * 100).toFixed(2);
-    if (remainingTime === 0) {
-      clearInterval(timerInterval);
-    }
-  }, 500);
+        percentage.value = ((decisecondsElapsed / (seconds * 10)) * 100).toFixed(2);
+        if (remainingTime === 0) {
+            clearInterval(timerInterval);
+        }
+    }, 500);
 }
 
 
@@ -184,6 +184,6 @@ const handleSpacebar = () => {
 
 <style scoped>
 .bg-blue-600 {
-  transition: width 0.1s ease-in-out;
+    transition: width 0.1s ease-in-out;
 }
 </style>
