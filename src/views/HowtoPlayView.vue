@@ -19,7 +19,7 @@
           <li>Select a song from the tracklist</li>
           <li>Type the highlighted word on the right in the input box on the left</li>
           <li>Once you've typed the whole word, press the spacebar to submit the word</li>
-          <li>If it's correct, your word score will increase; be careful punctuation and capitalization matters</li>
+          <li>If it's correct, your word score will increase; be careful punctuation and capitalization matter</li>
           <li>You must try to type all the words in each line of the song before the next line begins</li>
           <li>The timer bar on the left indicates how much time is left until the next line of the song</li>
           <li>Type as fast you can and have fun!</li>
