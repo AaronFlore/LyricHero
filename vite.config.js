@@ -9,12 +9,5 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
-  },
-  build: {
-    rollupOptions: {
-      external: [
-        'vue-material-design-icons/starOutline.vue'
-      ]
-    }
   }
 })

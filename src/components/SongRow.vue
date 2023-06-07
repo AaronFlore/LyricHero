@@ -53,19 +53,19 @@
         </div>
         <div class="flex items-center">
             <div class="rounded-full p-1 mr-1">
-                <starOutline fillColor="#CCCCCC" :size="26"/>
+                <HeartOutline fillColor="#CCCCCC" :size="26"/>
             </div>
                         <div class="rounded-full p-1 mr-1">
-                <starOutline fillColor="#CCCCCC" :size="26"/>
+                <HeartOutline fillColor="#CCCCCC" :size="26"/>
             </div>
                         <div class="rounded-full p-1 mr-1">
-                <starOutline fillColor="#CCCCCC" :size="26"/>
+                <HeartOutline fillColor="#CCCCCC" :size="26"/>
             </div>
                         <div class="rounded-full p-1 mr-1">
-                <starOutline fillColor="#CCCCCC" :size="26"/>
+                <HeartOutline fillColor="#CCCCCC" :size="26"/>
             </div>
             <div class="rounded-full p-1 mr-6">
-                <starOutline fillColor="#CCCCCC" :size="26"/>
+                <HeartOutline fillColor="#CCCCCC" :size="26"/>
             </div>
                 <div class="rounded-full p-1 mr-1">
                 <DotsHorizontal fillColor="#CCCCCC" :size="26"/>
@@ -91,7 +91,6 @@
   import MicrophoneVariant from 'vue-material-design-icons/MicrophoneVariant.vue';
   import Play from 'vue-material-design-icons/Play.vue';
   import Pause from 'vue-material-design-icons/Pause.vue';
-  import starOutline from 'vue-material-design-icons/starOutline.vue';
 
   import { useSongStore } from '../stores/song'
   import { storeToRefs } from 'pinia';

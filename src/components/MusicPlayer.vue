@@ -7,7 +7,6 @@ import ShuffleVariant from 'vue-material-design-icons/ShuffleVariant.vue';
 import HeartOutline from 'vue-material-design-icons/HeartOutline.vue';
 import MicrophoneVariant from 'vue-material-design-icons/MicrophoneVariant.vue';
 import Plus from 'vue-material-design-icons/Plus.vue';
-import starOutline from 'vue-material-design-icons/starOutline.vue';
 import PictureInPictureBottomRight from 'vue-material-design-icons/PictureInPictureBottomRight.vue';
 import Play from 'vue-material-design-icons/Play.vue';
 import Pause from 'vue-material-design-icons/Pause.vue';
@@ -212,7 +211,7 @@ watch(() => currentTrack.value.id, (val) => {
         <div class="flex items-center w-1/4 justify-end pr-6 ">
             <div class="flex items-center">
                 <div class="p-1.5 ml-2 hover:bg-[#5a5a5a] hover:bg-opacity-50 rounded-full cursor-pointer">
-                    <starOutline fillColor="#FFFFFF" :size="20" />
+                    <HeartOutline fillColor="#FFFFFF" :size="20" />
                 </div>
                 <div 
                     @mouseenter="isVolumeHover = true" 
