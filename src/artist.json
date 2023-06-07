@@ -5,27 +5,13 @@
     "tracks": [
         {
             "id": 1,
-            "name": "Solitude",
-            "path": "/songs/Solitude.mp3",
-            "albumCover": "/images/albumCovers/DiariesOfAHero.png",
-            "lyrics": true
-        },
-        {
-            "id": 2,
-            "name": "Throne",
-            "path": "/songs/Throne.mp3",
-            "albumCover": "/images/albumCovers/DiariesOfAHero.png",
-            "lyrics": true
-        },
-        {
-            "id": 3,
             "name": "Escape (The Pina Coloda Song) - Rupert Holmes",
             "path": "/songs/Pina_Colada.mp3",
             "albumCover": "/images/albumCovers/Pina_Colada.jpeg",
             "lyrics": true
         },
         {
-            "id": 4,
+            "id": 2,
             "name": "Dreams - Fleetwood Mac",
             "path": "/songs/Dreams.mp3",
             "albumCover": "/images/albumCovers/rumours.jpeg",

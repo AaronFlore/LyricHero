@@ -37,7 +37,8 @@ const playFunc = () => {
                     Track Selection:
                 </div>
 
-                <div class="mb-2 text-[#bfbfbf] text-[16px] py-1.5 font-light">Type along in real-time to the synchronized lyrics of the below songs. 
+                <div class="mb-2 text-[#bfbfbf] text-[16px] py-1.5 font-light">Type along in real-time to the synchronized
+                    lyrics of the below songs.
                     <br> Practice typing fast and accurately!
                 </div>
                 <div class="flex gap-4 items-center justify-start bottom-0 mb-1.5">
@@ -47,7 +48,7 @@ const playFunc = () => {
         </div>
         <div class="mt-11"></div>
     </div>
-    
+
     <div class="mb-10"></div>
 
     <div id="SongsSection" class="max-w-[1500px] mx-auto">

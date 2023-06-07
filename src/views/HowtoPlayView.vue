@@ -3,11 +3,15 @@
     <div class="px-8 mt-4 min-w-[800px]">
       <div class="flex justify-center gap-7 full">
         <div class="flex items-center justify-center relative">
-          <img width="100" class="absolute -left-36 rounded-full z-0 cursor-pointer" src="https://picsum.photos/id/188/300/300" />
-          <img width="115" class="absolute -left-[80px]  rounded-full z-10 cursor-pointer" src="https://picsum.photos/id/66/300/300" />
-          <img width="160" class="rounded-full z-20 cursor-pointer" src="https://picsum.photos/id/144/300/300" />
-          <img width="115" class="absolute -right-[80px] rounded-full z-10 cursor-pointer" src="https://picsum.photos/id/141/300/300" />
-          <img width="100" class="absolute -right-36 rounded-full z-0 cursor-pointer" src="https://picsum.photos/id/222/300/300" />
+          <img width="100" class="absolute -left-36 rounded-full z-0 cursor-pointer"
+            src="https://picsum.photos/id/188/300/300" />
+          <img width="115" class="absolute -left-[80px]  rounded-full z-10 cursor-pointer"
+            src="/images/albumCovers/Pina_Colada.jpeg" />
+          <img width="160" class="rounded-full z-20 cursor-pointer" src="/images/albumCovers/fireType2.jpeg" />
+          <img width="115" class="absolute -right-[80px] rounded-full z-10 cursor-pointer"
+            src="/images/albumCovers/rumours.jpeg" />
+          <img width="100" class="absolute -right-36 rounded-full z-0 cursor-pointer"
+            src="https://picsum.photos/id/222/300/300" />
         </div>
       </div>
     </div>
@@ -25,13 +29,13 @@
           <li>Type as fast you can and have fun!</li>
         </ol>
         <RouterLink to="/">
-        <div class="text-center mt-10">
-          <button type="button" class="text-white text-[15px] font-semibold rounded-full bg-[#EF5465] hover:bg-[#d8384a] px-8 py-2 text-center">
-            PLAY NOW
-          </button>
-        </div>
+          <div class="text-center mt-10">
+            <button type="button"
+              class="text-white text-[15px] font-semibold rounded-full bg-[#EF5465] hover:bg-[#d8384a] px-8 py-2 text-center">
+              PLAY NOW
+            </button>
+          </div>
         </RouterLink>
       </div>
-    </div>
   </div>
-</template>
+</div></template>
