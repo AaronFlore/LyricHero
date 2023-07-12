@@ -1,6 +1,6 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-#### [Link to Play](https://lyrichero.onrender.com/)
+#### <center> [Link to Play](https://lyrichero.onrender.com/) </center>
 
 <p align="center">
   <img src="./public/images/albumCovers/fireType2.jpeg" alt="Product Name Screen Shot" width="200" height="200" style="border-radius: 50%;">
