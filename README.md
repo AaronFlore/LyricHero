@@ -2,9 +2,9 @@
 ## About The Project
 #### [Link to Play](https://lyrichero.onrender.com/)
 
-<div style="display: flex; justify-content: center;">
-  <img src="relative-path-to-image" alt="Alt Text" width="200" height="200" style="border-radius: 50%;">
-</div>
+<p align="center">
+  <img src="./public/images/albumCovers/fireType2.jpeg" alt="Product Name Screen Shot" width="200" height="200" style="border-radius: 50%;">
+</p>
 
 Welcome to Lyric Speed Typer, a unique web app that combines music and typing! This app allows you to immerse yourself in music while testing and improving your typing skills. Whether you're a music enthusiast, language learner, or simply looking for a fun way to engage with lyrics, this app was designed for you.
 
