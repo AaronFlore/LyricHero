@@ -2,13 +2,14 @@
 ## About The Project
 #### [Click here to play](https://lyrichero.onrender.com/)
 
-![Cool Fire Typing Picture](./public/images/albumCovers/fireType2.jpeg)
+<img src="./public/images/albumCovers/fireType2.jpeg" alt="Fire Typing Picture" width="300" height="300">
 
 Welcome to Lyric Speed Typer, a unique web app that combines music and typing! This app allows you to immerse yourself in music while testing and improving your typing skills. Whether you're a music enthusiast, language learner, or simply looking for a fun way to engage with lyrics, this app was designed for you.
 
 As the song plays, you'll see the lyrics appearing on the screen one line at a time. Your challenge is to type along with the words as fast as possible before the next line begins. Gain points with each correct word!
 
-### Built With [![Vue][Vue.js]][Vue-url]
+### Built With 
+[![Vue][Vue.js]][Vue-url]
 * Vue JS 
 * Vite
 * Tailwind CSS
