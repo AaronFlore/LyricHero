@@ -153,7 +153,7 @@ watch(() => currentTrack.value.id, (val) => {
             <div class="flex items-center">
                 <div 
                     v-if="isTrackTimeCurrent" 
-                    class="text-[#8a8a8a] text-[10px] pr-2 relative -bottom-[5px]"
+                    class="text-[#8a8a8a] text-[12px] pr-2 relative -bottom-[5px]"
                 >
                     {{ isTrackTimeCurrent }}
                 </div>
@@ -193,12 +193,6 @@ watch(() => currentTrack.value.id, (val) => {
                         class="absolute z-[-0] inset-y-0 left-0 w-full bg-[#c4c4c4] rounded-full" 
                     />
 
-                </div>
-                <div 
-                    v-if="isTrackTimeTotal" 
-                    class="text-[#8a8a8a] text-[10px] pl-2 relative -bottom-[5px]"
-                >
-                    {{ isTrackTimeTotal }}
                 </div>
             </div>
         </div>
