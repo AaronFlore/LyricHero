@@ -8,14 +8,16 @@
             "name": "Escape (The Pina Coloda Song) - Rupert Holmes",
             "path": "/songs/Pina_Colada.mp3",
             "albumCover": "/images/albumCovers/Pina_Colada.jpeg",
-            "lyrics": true
+            "lyrics": true,
+            "difficulty": 3
         },
         {
             "id": 2,
             "name": "Dreams - Fleetwood Mac",
             "path": "/songs/Dreams.mp3",
             "albumCover": "/images/albumCovers/rumours.jpeg",
-            "lyrics": true
+            "lyrics": true,
+            "difficulty": 1
         }
     ]
 }
