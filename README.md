@@ -2,27 +2,20 @@
 ## About The Project
 #### [Click here to play](https://lyrichero.onrender.com/)
 
-[![Product Name Screen Shot][product-screenshot]](./public/images/albumCovers/fireType2.jpeg)
+![Cool Fire Typing Picture](./public/images/albumCovers/fireType2.jpeg)
 
 Welcome to Lyric Speed Typer, a unique web app that combines music and typing! This app allows you to immerse yourself in music while testing and improving your typing skills. Whether you're a music enthusiast, language learner, or simply looking for a fun way to engage with lyrics, this app was designed for you.
 
 As the song plays, you'll see the lyrics appearing on the screen one line at a time. Your challenge is to type along with the words as fast as possible before the next line begins. Gain points with each correct word!
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-### Built With
-
-* Vue JS [![Vue][Vue.js]][Vue-url]
+### Built With [![Vue][Vue.js]][Vue-url]
+* Vue JS 
 * Vite
 * Tailwind CSS
 * Pinia
 * Javascript
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 ### Local Installation
-
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
 
 1. Clone the repo
    ```sh
@@ -37,44 +30,17 @@ _Below is an example of how you can instruct your audience on installing and set
    npm run dev
    ```
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- USAGE EXAMPLES -->
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
 <!-- ROADMAP -->
-## Roadmap
+## Potential New Features
 
-- [x] Add Changelog
-- [x] Add back to top links
-- [ ] Add Additional Templates w/ Examples
-- [ ] Add "components" document to easily copy & paste sections of the readme
-- [ ] Multi-language Support
-    - [ ] Chinese
-    - [ ] Spanish
-
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+- [x] Overall Web App
+- [ ] Add Leaderboards
+- [ ] Add Personal High Scores
+- [ ] Add More Songs
 
 ## License
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
