@@ -18,7 +18,7 @@
     <div class="max-w-3xl mx-auto p-8 bg-gray-800 rounded-lg text-white">
       <h1 class="text-3xl font-semibold mb-6">About the App</h1>
       <p class="mb-6">
-        Welcome to Lyric Speed Typer, a unique web experience that combines music and typing! This app allows you to
+        Welcome to Lyric Hero, a unique web experience that combines music and typing! This app allows you to
         immerse yourself in music while testing and improving your typing skills. Whether you're a music enthusiast,
         language learner, or simply looking for a fun way to engage with lyrics, this app was designed for you.
       </p>
