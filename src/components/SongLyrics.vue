@@ -92,18 +92,26 @@ onMounted(() => {
     nextLyricTime = convertToSeconds(lyrics[currentTrack.value.id][0].time)
 })
 
+let timeout;
+
 const snapToPosition = (res) => {
     if (res && res.time < trackTime.value) {
-        let position = document.getElementById(res.time)
+        let position = document.getElementById(res.time);
         if (position) {
-            position.scrollIntoView({
-                behavior: 'smooth',
-                block: 'center',
-                inline: 'center'
-            });
+            if (timeout) {
+                clearTimeout(timeout);
+            }
+            timeout = setTimeout(() => {
+                position.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'center',
+                    inline: 'center'
+                });
+            }, 100);
         }
     }
-}
+};
+
 
 watch(() => trackTime.value, () => {
     setTimeout(() => {
